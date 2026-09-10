@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMUK | Beauty Salon, Hairdresser & Nail Salon in New Delhi</title>
+<meta name="description" content="SMUK in Neb Sarai, New Delhi offers beauty, hair, nails, lashes & makeup. Rated 4.8 from 1459 reviews. Open daily 9:30 AM–9:30 PM. Call +91 73010 20300.">
+<meta name="keywords" content="beauty salon New Delhi, eyebrow bar Delhi, eyelash extensions New Delhi, hair extensions Delhi, nail salon New Delhi, makeup artist Delhi, hairdresser New Delhi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #F4A6A0;
+    --secondary: #C9A7E8;
+    --background: #FFF9F4;
+    --text: #3D2C3A;
+    --cta: #7ED9C3;
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+    --radius: 9999px;
+    --radius-card: 24px;
+    --shadow-soft: 0 8px 40px rgba(61,44,58,0.08);
+    --transition: 0.4s ease;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== BUTTONS ===== */
+  .cta {
+    display: inline-block;
+    background: var(--cta);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.85em 2em;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition), transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 20px rgba(126,217,195,0.35);
+  }
+  .cta:hover {
+    background: #5ecbb5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(126,217,195,0.45);
+  }
+  .cta-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--cta);
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.8em 2em;
+    border-radius: var(--radius);
+    border: 2px solid var(--cta);
+    cursor: pointer;
+    transition: all var(--transition);
+    letter-spacing: 0.02em;
+  }
+  .cta-outline:hover {
+    background: var(--cta);
+    color: #fff;
+  }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 80px 20px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .section-heading {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  .section-sub {
+    font-size: 1.05rem;
+    color: #7a6575;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+  .text-center { text-align: center; }
+  .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+  /* ===== FADE IN ANIMATION ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(255,249,244,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244,166,160,0.15);
+    padding: 0 20px;
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.04em;
+  }
+  .nav-logo span { color: var(--primary); }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  nav ul li a {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.2s;
+  }
+  nav ul li a:hover { color: var(--primary); }
+  nav ul li a.cta {
+    font-size: 0.9rem;
+    padding: 0.55em 1.4em;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .burger span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(244,166,160,0.55) 0%, rgba(201,167,232,0.45) 50%, rgba(61,44,58,0.55) 100%);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 68px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: var(--radius);
+    padding: 0.4em 1.2em;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+  .hero-badge .stars { color: #FFD700; letter-spacing: 1px; }
+  .hero-content h1 {
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(61,44,58,0.25);
+  }
+  .hero-content .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .hero-content .hero-text {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2.2rem;
+    line-height: 1.8;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero-btns .cta-outline {
+    color: #fff;
+    border-color: rgba(255,255,255,0.7);
+  }
+  .hero-btns .cta-outline:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+
+  /* ===== ABOUT ===== */
+  #about {
+    background: #fff;
+  }
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .about-text .section-sub {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .about-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--background);
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 0.4em 1.1em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+  .about-visual {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 4/3;
+  }
+  .about-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.82rem;
+    color: #7a6575;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ===== SERVICES ===== */
+  #services {
+    background: var(--background);
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 1.8rem 2rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(61,44,58,0.12);
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+  .service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+  .service-card p {
+    font-size: 0.92rem;
+    color: #7a6575;
+    line-height: 1.6;
+  }
+
+  /* ===== REVIEWS ===== */
+  #reviews {
+    background: #fff;
+  }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .review-card {
+    background: var(--background);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--primary);
+  }
+  .review-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+  }
+  .review-stars span { color: #FFD700; font-size: 1.1rem; }
+  .review-text {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+  }
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .review-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .review-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .review-date {
+    font-size: 0.8rem;
+    color: #a08fa0;
+  }
+  .reviews-rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .rating-big {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+  .rating-details { display: flex; flex-direction: column; gap: 0.2rem; }
+  .rating-stars { display: flex; gap: 3px; }
+  .rating-stars span { color: #FFD700; font-size: 1.2rem; }
+  .rating-count { font-size: 0.88rem; color: #7a6575; }
+
+  /* ===== GALLERY ===== */
+  #gallery {
+    background: var(--background);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 12px;
+    margin-top: 2.5rem;
+  }
+  .gallery-item {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+  }
+  .gallery-item:hover { transform: scale(1.02); }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery-item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    aspect-ratio: 1/1;
+  }
+  .gallery-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    aspect-ratio: 3/4;
+  }
+  .gallery-item:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    aspect-ratio: 16/9;
+  }
+
+  /* ===== HOURS & LOCATION ===== */
+  #horaires {
+    background: #fff;
+  }
+  .hours-location-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hours-card {
+    background: var(--background);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+  }
+  .hours-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--text);
+  }
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .hours-table tr { border-bottom: 1px solid rgba(244,166,160,0.2); }
+  .hours-table tr:last-child { border-bottom: none; }
+  .hours-table td {
+    padding: 0.65rem 0;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .hours-table td:first-child { font-weight: 600; width: 45%; }
+  .hours-table td:last-child { color: #7a6575; }
+  .contact-info-card {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    color: #fff;
+  }
+  .contact-info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #fff;
+  }
+  .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-item .icon {
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+  .contact-info-item p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.6;
+  }
+  .contact-info-item a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .map-container {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    height: 300px;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ===== CONTACT FORM ===== */
+  #contact {
+    background: var(--background);
+  }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .contact-form-wrap {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-soft);
+  }
+  .form-group {
+    margin-bottom: 1.4rem;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.85em 1.2em;
+    border: 1.5px solid rgba(244,166,160,0.4);
+    border-radius: 16px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--background);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(244,166,160,0.18);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+  }
+  .contact-form-wrap .cta { width: 100%; text-align: center; }
+  .contact-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .contact-aside-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contact-aside-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .contact-aside-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    color: var(--text);
+  }
+  .contact-aside-card p {
+    font-size: 0.88rem;
+    color: #7a6575;
+  }
+  .contact-aside-card a {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  /* ===== TRUST SIGNALS ===== */
+  #trust {
+    background: linear-gradient(135deg, rgba(244,166,160,0.12) 0%, rgba(201,167,232,0.12) 100%);
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .trust-item {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+  }
+  .trust-item:hover { transform: translateY(-3px); }
+  .trust-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+  .trust-item p {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.85);
+    padding: 60px 20px 30px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand .nav-logo {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .footer-brand p {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.7);
+  }
+  .footer-col h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+  }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.7);
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--primary); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-bottom p {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* ===== RESPONSIVE 768px ===== */
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex !important;
+      flex-direction: row !important;
+      position: static !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      gap: 2rem;
+    }
+    .burger { display: none !important; }
+
+    .about-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .reviews-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .hours-location-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .contact-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .trust-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-top {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+    .gallery-item:nth-child(1) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item:nth-child(2) {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+      aspect-ratio: 16/7;
+    }
+    .gallery-item:nth-child(3) {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      aspect-ratio: 16/6;
+    }
+  }
+
+  /* ===== RESPONSIVE 1024px ===== */
+  @media (min-width: 1024px) {
+    section { padding: 100px 40px; }
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .trust-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  /* ===== MOBILE NAV ===== */
+  @media (max-width: 767px) {
+    .burger { display: flex; }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: rgba(255,249,244,0.98);
+      backdrop-filter: blur(12px);
+      padding: 1.5rem 20px 2rem;
+      gap: 1rem;
+      box-shadow: 0 8px 30px rgba(61,44,58,0.1);
+      border-bottom: 1px solid rgba(244,166,160,0.2);
+    }
+    nav ul.open {
+      display: flex;
+    }
+    nav ul li a.cta {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .about-stats { gap: 1.2rem; }
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3) {
+      grid-column: auto;
+      grid-row: auto;
+      aspect-ratio: 4/3;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">SM<span>UK</span></a>
+    <button class="burger" id="burger" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-menu" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#horaires">Hours</a></li>
+      <li><a href="#contact" class="cta">Book Your Appointment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg" role="img" aria-label="SMUK beauty salon interior"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-badge">
+      <span class="stars">★★★★★</span>
+      <span>4.8 stars · 1,459 reviews</span>
+    </div>
+    <h1>Welcome to SMUK</h1>
+    <p class="hero-sub">Your trusted beauty salon, hairdresser &amp; nail salon in New Delhi</p>
+    <p class="hero-text">At SMUK, we bring together expert beauty services under one roof — from hairdressing and hair extensions to eyebrow shaping, eyelash treatments, makeup, and nails. Located in Neb Sarai, Sainik Farm, we are proud to be rated 4.8 stars by 1,459 happy clients.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="cta">Book Your Appointment</a>
+      <a href="tel:+917301020300" class="cta-outline">Call +91 73010 20300</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" aria-label="About SMUK">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-text fade-in">
+        <span class="section-label">About Us</span>
+        <h2 class="section-heading">About SMUK</h2>
+        <div class="about-pill">📍 Neb Sarai, Sainik Farm, New Delhi</div>
+        <p class="section-sub">SMUK is a full-service beauty destination in New Delhi, offering a wide range of services including beauty salon treatments, beautician services, eyebrow bar, eyelash salon, hair extension technician and supplier, hair replacement service, make-up artistry, nail salon, and hairdressing. Our team is dedicated to providing genuine rates and excellent service in a welcoming ambience. Whether you're looking for a fresh haircut, a new set of extensions, or a complete makeover, SMUK is here to help you look and feel your best.</p>
+        <p style="font-size:0.9rem;color:#7a6575;margin-bottom:1.5rem;">A-1/4 Ch. Balak Ram Market, IGNOU Rd, Block A 1, Neb Sarai, Sainik Farm, New Delhi, Delhi 110068, India.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">4.8★</span>
+            <span class="stat-label">Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">1,459</span>
+            <span class="stat-label">Reviews</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">Daily</span>
+            <span class="stat-label">Open 7 days</span>
+          </div>
+        </div>
+        <br>
+        <a href="#contact" class="cta">Book Your Appointment</a>
+      </div>
+      <div class="about-visual fade-in">
+        <img src="assets/gallery-1.jpg" alt="Inside SMUK beauty salon in New Delhi" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" aria-label="Our Services">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-heading">Our Services</h2>
+      <p class="section-sub">We offer a comprehensive range of beauty and hair services to suit your every need.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">💄</div>
+        <div>
+          <h3>Beauty Salon &amp; Beautician Services</h3>
+          <p>Professional beauty treatments tailored to you.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🪮</div>
+        <div>
+          <h3>Eyebrow Bar</h3>
+          <p>Expert eyebrow shaping and styling.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">👁️</div>
+        <div>
+          <h3>Eyelash Salon</h3>
+          <p>Lash treatments to enhance your eyes.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💇</div>
+        <div>
+          <h3>Hair Extensions</h3>
+          <p>Hair extension technician and supplier services.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">✨</div>
+        <div>
+          <h3>Hair Replacement Service</h3>
+          <p>Solutions for hair replacement.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🎨</div>
+        <div>
+          <h3>Make-up Artist</h3>
+          <p>Professional makeup for any occasion.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💅</div>
+        <div>
+          <h3>Nail Salon</h3>
+          <p>Manicures, pedicures, and nail art.</p>
+        </div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">✂️</div>
+        <div>
+          <h3>Hairdresser</h3>
+          <p>Cuts, styling, and hair care.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:2.5rem;">
+      <a href="#contact" class="cta">Book Your Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" aria-label="Customer Reviews">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Client Testimonials</span>
+      <h2 class="section-heading">What Our Clients Say</h2>
+    </div>
+    <div class="reviews-rating-summary fade-in" style="justify-content:center;margin-top:1.5rem;">
+      <div class="rating-big">4.8</div>
+      <div class="rating-details">
+        <div class="rating-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="rating-count">Based on 1,459 reviews</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-text">"Good experience, been coming since I shifted to Delhi, really good network of salon as well, really good service, genuine rates."</p>
+        <div class="review-author">
+          <div class="review-avatar">HA</div>
+          <div>
+            <div class="review-name">Hridyansh Aggarwal</div>
+            <div class="review-date">In the last week</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-text">"Wonderful experience and excellent service! Great ambience and well behaved members working here!! Must visit."</p>
+        <div class="review-author">
+          <div class="review-avatar">TP</div>
+          <div>
+            <div class="review-name">Twinkle Parakh</div>
+            <div class="review-date">In the last week</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" aria-label="Gallery">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-heading">Gallery</h2>
+      <p class="section-sub">A glimpse of our salon and work.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in">
+        <img src="assets/gallery-1.jpg" alt="SMUK beauty salon work — hair and beauty treatments" loading="lazy">
+      </div>
+      <div class="gallery-item fade-in">
+        <img src="assets/hero.jpg" alt="SMUK salon interior — welcoming and professional environment" loading="lazy">
+      </div>
+      <div class="gallery-item fade-in">
+        <img src="assets/gallery-2.jpg" alt="SMUK nail and beauty services in New Delhi" loading="lazy">
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:2.5rem;">
+      <a href="#contact" class="cta">Book Your Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS & LOCATION ===== -->
+<section id="horaires" aria-label="Hours and Location">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-heading">Hours &amp; Location</h2>
+      <p class="section-sub">Visit us at SMUK in New Delhi. We are open every day from 9:30 AM to 9:30 PM.</p>
+    </div>
+    <div class="hours-location-inner" style="margin-top:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div class="hours-card fade-in">
+          <h3>Opening Hours</h3>
+          <table class="hours-table" aria-label="Opening hours">
+            <tbody>
+              <tr><td>Monday</td><td>9:30 AM – 9:30 PM</td></tr>
+              <tr><td>Tuesday</td><td>9:30 AM – 9:30 PM</td></tr>
+              <tr><td>Wednesday</td><td>9:30 AM – 9:30 PM</td></tr>
+              <tr><td>Thursday</td><td>9:30 AM – 9:30 PM</td></tr>
+              <tr><td>Friday</td><td>9:30 AM – 9:30 PM</td></tr>
+              <tr><td>Saturday</td><td>9:30 AM – 9:30 PM</td></tr>
+              <tr><td>Sunday</td><td>9:30 AM – 9:30 PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="contact-info-card fade-in">
+          <h3>Contact &amp; Address</h3>
+          <div class="contact-info-item">
+            <span class="icon">📍</span>
+            <p>A-1/4 Ch. Balak Ram Market, IGNOU Rd, Block A 1, Neb Sarai, Sainik Farm, New Delhi, Delhi 110068, India.</p>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">📞</span>
+            <p><a href="tel:+917301020300">+91 73010 20300</a></p>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">✉️</span>
+            <p><a href="mailto:info@smukexpohub.com">info@smukexpohub.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=28.5073,77.2219&z=16&output=embed"
+            title="SMUK location on Google Maps"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Map showing SMUK location in Neb Sarai, New Delhi">
+          </iframe>
+        </div>
+        <div style="margin-top:1.5rem;text-align:center;">
+          <a href="https://www.google.com/maps/search/?api=1&query=SMUK+Neb+Sarai+New+Delhi" target="_blank" rel="noopener noreferrer" class="cta">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section id="contact" aria-label="Contact Us">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-heading">Contact Us</h2>
+      <p class="section-sub">Have a question or want to book an appointment? Reach out to us by phone or email.</p>
+    </div>
+    <div class="contact-inner" style="margin-top:2.5rem;">
+      <div class="contact-form-wrap fade-in">
+        <h3 style="font-size:1.3rem;margin-bottom:1.5rem;">Send Us a Message</h3>
+        <form action="https://checkout.kamkod.com/contact" method="POST" aria-label="Contact form">
+          <input type="hidden" name="lead_id" value="ChIJby0dO38fDTkR4jm9L_9pqHo">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about the service you're interested in or ask us anything." required></textarea>
+          </div>
+          <button type="submit" class="cta">Book Your Appointment</button>
+        </form>
+      </div>
+      <div class="contact-aside fade-in">
+        <div class="contact-aside-card">
+          <div class="contact-aside-icon">📞</div>
+          <div>
+            <h4>Call Us</h4>
+            <p><a href="tel:+917301020300">+91 73010 20300</a></p>
+          </div>
+        </div>
+        <div class="contact-aside-card">
+          <div class="contact-aside-icon">✉️</div>
+          <div>
+            <h4>Email Us</h4>
+            <p><a href="mailto:info@smukexpohub.com">info@smukexpohub.com</a></p>
+          </div>
+        </div>
+        <div class="contact-aside-card">
+          <div class="contact-aside-icon">🕐</div>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Open daily, 9:30 AM – 9:30 PM.</p>
+          </div>
+        </div>
+        <div class="contact-aside-card">
+          <div class="contact-aside-icon">📍</div>
+          <div>
+            <h4>Our Address</h4>
+            <p>A-1/4 Ch. Balak Ram Market, IGNOU Rd, Neb Sarai, Sainik Farm, New Delhi, Delhi 110068.</p>
+          </div>
+        </div>
+        <div style="margin-top:0.5rem;">
+          <a href="tel:+917301020300" class="cta" style="width:100%;display:block;text-align:center;">Call +91 73010 20300</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST SIGNALS ===== -->
+<section id="trust" aria-label="Why Choose SMUK">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Our Promise</span>
+      <h2 class="section-heading">Why Choose SMUK</h2>
+      <p class="section-sub">With a 4.8-star rating from 1,459 reviews, SMUK is a trusted choice for beauty and hair services in New Delhi. Our clients appreciate our genuine rates, excellent service, and welcoming ambience.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item fade-in">
+        <div class="trust-icon">🚶</div>
+        <p>Walk-ins Welcome</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">⭐</div>
+        <p>Professional-Grade Products</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">💳</div>
+        <p>Card &amp; UPI Payments Accepted</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">👩‍🎨</div>
+        <p>Experienced Stylists &amp; Technicians</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">🧼</div>
+        <p>Hygienic, Sanitized Tools</p>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">🅿️</div>
+        <p>Easy Parking Nearby</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer aria-label="Footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="nav-logo">SM<span style="color:var(--primary)">UK</span></span>
+        <p>SMUK — Beauty salon, hairdresser, nail salon, and more in New Delhi. Open daily 9:30 AM – 9:30 PM. Call +91 73010 20300.</p>
+        <br>
+        <p style="font-size:0.85rem;">A-1/4 Ch. Balak Ram Market, IGNOU Rd, Block A 1, Neb Sarai, Sainik Farm, New Delhi, Delhi 110068, India.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#horaires">Hours &amp; Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+917301020300">+91 73010 20300</a></li>
+          <li><a href="mailto:info@smukexpohub.com">info@smukexpohub.com</a></li>
+          <li>Open 7 days a week.</li>
+          <li>9:30 AM – 9:30 PM.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SMUK. All rights reserved.</p>
+      <p>Beauty salon · Hairdresser · Nail salon · New Delhi</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== BURGER MENU =====
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', function() {
+    const isOpen = navMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close menu on nav link click
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ===== FADE IN ON SCROLL =====
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // Hero fade in immediately
+  document.querySelector('#hero .fade-in').classList.add('visible');
+</script>
+<!-- KAMKOD:DEMO_START -->
+<script>
+(function(){
+  var URL = 'https://checkout.kamkod.com/?lead=ChIJby0dO38fDTkR4jm9L_9pqHo';
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button, [role="button"]');
+    if(!el || el.closest('form')) return;               /* formulaire -> endpoint contact */
+    if(el.classList.contains('cta')) { e.preventDefault(); window.location.href = URL; return; }
+    if(el.closest('header nav, nav')) return;           /* navigation interne de la démo */
+    var a = e.target.closest('a');
+    if(!a) return;                                      /* bouton seul hors nav: on laisse */
+    var href = a.getAttribute('href') || '';
+    if(href.charAt(0) === '#') return;                  /* ancres de section */
+    if(/^https?:|^\/\//i.test(href)) return;          /* lien externe réel */
+    e.preventDefault(); window.location.href = URL;     /* tel:, mailto:, javascript:… */
+  }, true);
+})();
+</script>
+<div id="kamkod-demo-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  This is a preview of your future website — <a href="https://checkout.kamkod.com/?lead=ChIJby0dO38fDTkR4jm9L_9pqHo" style="color:#FFD700;font-weight:600;">activate it now</a>
+</div>
+<!-- KAMKOD:DEMO_END -->
+</body>
+</html>
